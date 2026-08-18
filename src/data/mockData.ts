@@ -1,0 +1,293 @@
+import { Category, Service, ProductItem, StoreUnit, InstagramPost, Differential } from '../types';
+import { COMPANY_CONTACTS } from '../utils/whatsapp';
+
+export const CATEGORIES_DATA: Category[] = [
+  {
+    id: 'caes',
+    name: 'Cães',
+    subtitle: 'Tudo para o melhor amigo',
+    description: 'Rações Super Premium e Premium Especial, petiscos saborosos, brinquedos resistentes, caminhas, coleiras, guias e itens de higiene diária.',
+    image: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=800&auto=format&fit=crop',
+    tag: 'Mais Procurado',
+    popularItems: ['Rações Premium & Super Premium', 'Petiscos & Bifinhos', 'Brinquedos Interativos', 'Higiene & Tapetes'],
+  },
+  {
+    id: 'gatos',
+    name: 'Gatos',
+    subtitle: 'Nutrição e bem-estar felino',
+    description: 'Alimentos balanceados, sachês, areias sanitárias de alta absorção, arranhadores, fontes de água e brinquedos para enriquecimento ambiental.',
+    image: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=800&auto=format&fit=crop',
+    tag: 'Favoritos',
+    popularItems: ['Areias Sanitárias', 'Rações Secas & Úmidas', 'Arranhadores', 'Petiscos & Catnip'],
+  },
+  {
+    id: 'passaros',
+    name: 'Pássaros',
+    subtitle: 'Sementes selecionadas e viveiros',
+    description: 'Misturas especiais de sementes, rações extrusadas, farinhadas, suplementos, bebedouros, gaiolas e poleiros para aves de todas as espécies.',
+    image: 'https://images.unsplash.com/photo-1522858547137-f1dcec554f55?q=80&w=800&auto=format&fit=crop',
+    tag: 'Especialidades',
+    popularItems: ['Sementes Selecionadas', 'Extrusados Nobres', 'Gaiolas & Viveiros', 'Bebedouros & Ninhos'],
+  },
+  {
+    id: 'roedores',
+    name: 'Roedores',
+    subtitle: 'Cuidados para pequenos pets',
+    description: 'Alimentos completos para hamsters, coelhos, porquinhos-da-índia e chinchilas, feno selecionado, serragem esterilizada, tocas e bebedouros.',
+    image: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?q=80&w=800&auto=format&fit=crop',
+    tag: 'Pequenos Animais',
+    popularItems: ['Feno Fresco & Alfalfa', 'Rações Específicas', 'Gaiolas & Rodinhas', 'Substratos & Serragem'],
+  },
+  {
+    id: 'higiene',
+    name: 'Higiene e Beleza',
+    subtitle: 'Cuidado, brilho e saúde',
+    description: 'Shampoos dermatológicos, condicionadores, colônias suaves, toalhas, escovas desembarassadoras, cortadores de unhas e desinfetantes pet.',
+    image: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=800&auto=format&fit=crop',
+    tag: 'Estética & Saúde',
+    popularItems: ['Shampoos Especiais', 'Colônias & Hidratantes', 'Tapetes Higiênicos', 'Eliminadores de Odores'],
+  },
+  {
+    id: 'aquarismo',
+    name: 'Aquarismo',
+    subtitle: 'Mundo aquático completo',
+    description: 'Rações em flocos e grânulos para peixes de água doce e ornamentais, condicionadores de água, filtros, bombas de oxigênio e decorações.',
+    image: 'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=800&auto=format&fit=crop',
+    tag: 'Aquários & Peixes',
+    popularItems: ['Rações em Flocos & Grãos', 'Anticloro & Condicionadores', 'Filtros & Bombas', 'Decorações Naturais'],
+  },
+];
+
+export const SERVICES_DATA: Service[] = [
+  {
+    id: 'clinica',
+    title: 'Clínica Veterinária',
+    subtitle: 'Cuidado especializado para o seu melhor amigo',
+    description: 'Atendimento dedicado à saúde e ao bem-estar dos animais. Acompanhamento preventivo, consultas, orientação nutricional e atenção com quem faz parte da sua família.',
+    image: 'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?q=80&w=800&auto=format&fit=crop',
+    badge: 'Saúde & Bem-estar',
+    benefits: [
+      'Profissionais dedicados e atenciosos',
+      'Atendimento focado na prevenção e na saúde do pet',
+      'Ambiente tranquilo e higienizado',
+      'Canal de contato direto para agendamento de consultas',
+    ],
+    ctaText: 'Falar com a Clínica',
+    whatsappMessage: 'Olá! Vim pelo site da Terra Fértil Pet e gostaria de informações sobre a clínica.',
+    phone: COMPANY_CONTACTS.phoneClinica,
+  },
+  {
+    id: 'banho-e-tosa',
+    title: 'Banho e Tosa',
+    subtitle: 'Seu pet limpo, cuidado e ainda mais bonito',
+    description: 'Higienização completa e estética animal com produtos de primeira linha. Cuidado com pelagens sensíveis, secagem segura e carinho do início ao fim.',
+    image: 'https://images.unsplash.com/photo-1535294435445-d7249524ef2e?q=80&w=800&auto=format&fit=crop',
+    badge: 'Higiene & Estética',
+    benefits: [
+      'Produtos cosméticos profissionais hipoalergênicos',
+      'Tosa higiênica, tosa da raça e tosa bebê',
+      'Equipe experiente com manejo amoroso e respeitoso',
+      'Ambiente climatizado e toalhas esterilizadas',
+    ],
+    ctaText: 'Agendar Banho e Tosa',
+    whatsappMessage: 'Olá! Vim pelo site e gostaria de informações sobre banho e tosa.',
+    phone: COMPANY_CONTACTS.whatsappCentral,
+  },
+];
+
+export const DIFFERENTIALS_DATA: Differential[] = [
+  {
+    id: 'variety',
+    title: 'Variedade Completa',
+    description: 'Tudo o que seu pet precisa em um só lugar: alimentação, higiene, saúde, brinquedos e acessórios para diversas espécies.',
+    iconName: 'PackageCheck',
+  },
+  {
+    id: 'experience',
+    title: 'Experiência & Tradição',
+    description: 'Uma empresa totalmente dedicada ao universo pet, compreendendo as necessidades reais de tutores e animais de estimação.',
+    iconName: 'Award',
+  },
+  {
+    id: 'practicality',
+    title: 'Praticidade no Dia a Dia',
+    description: 'Produtos de qualidade e serviços essenciais reunidos para facilitar sua rotina com agilidade e conveniência.',
+    iconName: 'Clock',
+  },
+  {
+    id: 'care',
+    title: 'Cuidado de Verdade',
+    description: 'Atendimento humanizado, pensado com carinho para garantir o conforto, a segurança e a alegria do seu melhor amigo.',
+    iconName: 'HeartHandshake',
+  },
+  {
+    id: 'support',
+    title: 'Atendimento Rápido no WhatsApp',
+    description: 'Tire dúvidas sobre estoque, consulte preços e agende serviços de forma direta e sem burocracia.',
+    iconName: 'MessageCircle',
+  },
+  {
+    id: 'hours',
+    title: 'Horário Estendido',
+    description: 'Aberto de segunda a sábado das 08h às 21h, e domingos e feriados das 08h às 18h para sua total conveniência.',
+    iconName: 'CalendarCheck',
+  },
+];
+
+export const STORE_UNITS_DATA: StoreUnit[] = [
+  {
+    id: 'unidade-central',
+    name: 'Terra Fértil Pet — Loja Principal',
+    statusBadge: 'Loja Completa com Clínica & Estética',
+    address: 'Consulte a localização exata pelo WhatsApp ou telefone da unidade',
+    cityState: 'Distrito Federal e Região (DDD 61)',
+    phonePrimary: '(61) 3374-9033',
+    phoneSecondary: '(61) 9807-0030',
+    whatsapp: '(61) 99840-0010',
+    hoursWeekday: 'Segunda a sábado: 08h às 21h',
+    hoursSunday: 'Domingos e feriados: 08h às 18h',
+    mapQuery: 'Terra Fertil Pet Distrito Federal',
+    note: 'Estacionamento no local e estrutura climatizada com pet shop completo, clínica e banho e tosa.',
+  },
+];
+
+export const PRODUCTS_CATALOG: ProductItem[] = [
+  {
+    id: 'racao-premium-caes',
+    name: 'Rações Premium e Super Premium para Cães',
+    category: 'racoes',
+    categoryLabel: 'Cães & Nutrição',
+    image: 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=600&auto=format&fit=crop',
+    description: 'Marcas líderes do mercado para filhotes, adultos e idosos de todas as raças e portes.',
+    highlights: ['Alta Digestibilidade', 'Pelagem Brilhante', 'Sem Corantes Artificiais'],
+    brand: 'Linhas Selecionadas',
+  },
+  {
+    id: 'racao-gatos-castrados',
+    name: 'Nutrição Especializada para Gatos',
+    category: 'racoes',
+    categoryLabel: 'Gatos & Nutrição',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=600&auto=format&fit=crop',
+    description: 'Fórmulas desenvolvidas para controle de peso, saúde do trato urinário e bolas de pelo.',
+    highlights: ['Saúde Urinária', 'Controle de Calorias', 'Sabor Incomparável'],
+    brand: 'Linhas Selecionadas',
+  },
+  {
+    id: 'petiscos-snacks',
+    name: 'Petiscos, Bifinhos e Ossos Naturais',
+    category: 'petiscos',
+    categoryLabel: 'Petiscos & Recompensas',
+    image: 'https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?q=80&w=600&auto=format&fit=crop',
+    description: 'Snacks saudáveis ideais para adestramento, momentos de agrado e higiene dental.',
+    highlights: ['Ricos em Proteínas', 'Diversos Sabores', 'Auxílio na Limpeza dos Dentes'],
+    brand: 'Variedade',
+  },
+  {
+    id: 'brinquedos-interativos',
+    name: 'Brinquedos Resistentes e Arranhadores',
+    category: 'brinquedos',
+    categoryLabel: 'Enriquecimento Ambiental',
+    image: 'https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?q=80&w=600&auto=format&fit=crop',
+    description: 'Bolinhas, cordas, mordedores de borracha, túneis e varinhas com penas para diversão diária.',
+    highlights: ['Material Atóxico', 'Reduz Estresse', 'Alta Durabilidade'],
+    brand: 'Linha Divertida',
+  },
+  {
+    id: 'higiene-tapetes-shampoos',
+    name: 'Tapetes Higiênicos e Shampoos Especiais',
+    category: 'higiene',
+    categoryLabel: 'Higiene & Cuidados',
+    image: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=600&auto=format&fit=crop',
+    description: 'Tapetes de alta absorção com atrativo canino, areias sanitárias e cosméticos suaves.',
+    highlights: ['Gel Super Absorvente', 'Controle de Odores', 'Fragrâncias Suaves'],
+    brand: 'Higiene Pet',
+  },
+  {
+    id: 'sementes-passaros',
+    name: 'Misturas Especiais para Pássaros',
+    category: 'passaros',
+    categoryLabel: 'Aves & Nutrição',
+    image: 'https://images.unsplash.com/photo-1522858547137-f1dcec554f55?q=80&w=600&auto=format&fit=crop',
+    description: 'Misturas balanceadas com alpiste, painço, girassol e extrusados para calopsitas, canários e papagaios.',
+    highlights: ['Sementes Limpas e Ventiladas', 'Vitaminas Fortificadas', 'Diversas Espécies'],
+    brand: 'Aves Nobres',
+  },
+  {
+    id: 'acessorios-guias-coleiras',
+    name: 'Guias, Peitorais e Camas Confortáveis',
+    category: 'acessorios',
+    categoryLabel: 'Conforto & Passeio',
+    image: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=600&auto=format&fit=crop',
+    description: 'Modelos ergonômicos e almofadados para passeios seguros e descanso com máximo aconchego.',
+    highlights: ['Fechos de Alta Segurança', 'Tecidos Laváveis', 'Design Moderno'],
+    brand: 'Acessórios Pet',
+  },
+  {
+    id: 'aquarismo-cuidados',
+    name: 'Rações para Peixes e Acessórios de Aquarismo',
+    category: 'aquarismo',
+    categoryLabel: 'Mundo Aquático',
+    image: 'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=600&auto=format&fit=crop',
+    description: 'Alimentação para peixes tropicais, bettas e carpas, além de condicionadores e bombas.',
+    highlights: ['Realça a Coloração dos Peixes', 'Não Turva a Água', 'Fácil Dosagem'],
+    brand: 'Aquarismo',
+  },
+];
+
+export const INSTAGRAM_POSTS_DATA: InstagramPost[] = [
+  {
+    id: 'post-1',
+    image: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=600&auto=format&fit=crop',
+    caption: 'Dia de garantir a nutrição ideal para o seu companheiro! Variedade completa das melhores rações você encontra aqui na Terra Fértil Pet.',
+    likes: 184,
+    comments: 19,
+    category: 'Nutrição Pet',
+  },
+  {
+    id: 'post-2',
+    image: 'https://images.unsplash.com/photo-1535294435445-d7249524ef2e?q=80&w=600&auto=format&fit=crop',
+    caption: 'Olha que fofura pós-banho! Nosso serviço de Banho e Tosa cuida de cada detalhe com carinho e produtos dermatológicos seguros.',
+    likes: 247,
+    comments: 32,
+    category: 'Banho & Tosa',
+  },
+  {
+    id: 'post-3',
+    image: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=600&auto=format&fit=crop',
+    caption: 'Gatos precisam de estímulos diários! Confira nossa seleção de arranhadores, brinquedos interativos e sachês saborosos.',
+    likes: 192,
+    comments: 14,
+    category: 'Universo Felino',
+  },
+  {
+    id: 'post-4',
+    image: 'https://images.unsplash.com/photo-1522858547137-f1dcec554f55?q=80&w=600&auto=format&fit=crop',
+    caption: 'Sementes selecionadas e misturas nobres para garantir a saúde e a vitalidade das suas aves.',
+    likes: 135,
+    comments: 11,
+    category: 'Aves & Pássaros',
+  },
+];
+
+export const FAQ_DATA = [
+  {
+    question: 'Quais são os horários de funcionamento da Terra Fértil Pet?',
+    answer: 'Funcionamos de segunda a sábado das 08h às 21h, e aos domingos e feriados das 08h às 18h. Horário estendido para você ter mais tranquilidade no seu dia a dia.',
+  },
+  {
+    question: 'Como faço para agendar o serviço de Banho e Tosa?',
+    answer: 'Você pode agendar de forma rápida e prática diretamente pelo nosso WhatsApp Central no número (61) 99840-0010 ou clicando nos botões de agendamento disponíveis aqui no site.',
+  },
+  {
+    question: 'Como funciona o atendimento da Clínica Veterinária?',
+    answer: 'A clínica veterinária oferece cuidados dedicados à saúde do seu pet. Para agendamento e informações sobre consultas, entre em contato pelo telefone/WhatsApp exclusivo da clínica: (61) 99572-0394.',
+  },
+  {
+    question: 'Vocês têm produtos para pássaros, roedores e aquarismo além de cães e gatos?',
+    answer: 'Sim! A Terra Fértil Pet é uma loja completa. Temos seções especializadas com sementes e gaiolas para pássaros, feno e rações para roedores, e itens de aquarismo para peixes.',
+  },
+  {
+    question: 'Posso consultar a disponibilidade de uma marca de ração ou medicamento pelo WhatsApp?',
+    answer: 'Com certeza! Basta clicar no botão "Falar no WhatsApp" ou "Consultar disponibilidade" no produto desejado. Nossa equipe responde rapidamente com as opções em estoque.',
+  },
+];

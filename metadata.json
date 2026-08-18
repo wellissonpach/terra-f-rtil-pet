@@ -1,0 +1,6 @@
+{
+  "name": "Terra Fértil Pet",
+  "description": "Site institucional e comercial da Terra Fértil Pet — O mundo do seu Pet. Produtos, cuidados, clínica, banho e tosa com atendimento rápido via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

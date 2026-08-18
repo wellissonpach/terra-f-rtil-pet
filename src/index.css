@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-brand-blue: #063B98;
+    --color-brand-blue-dark: #032866;
+    --color-brand-green: #00A651;
+    --color-brand-green-hover: #008f45;
+  }
+
+  body {
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif;
+  }
+}
+
+/* Custom Utilities for Terra Fértil Pet */
+.bg-brand-blue {
+  background-color: #063B98;
+}
+
+.bg-brand-blue-dark {
+  background-color: #032866;
+}
+
+.text-brand-blue {
+  color: #063B98;
+}
+
+.border-brand-blue {
+  border-color: #063B98;
+}
+
+.bg-brand-green {
+  background-color: #00A651;
+}
+
+.text-brand-green {
+  color: #00A651;
+}
+
+.border-brand-green {
+  border-color: #00A651;
+}
+
+.hover\:bg-brand-green-hover:hover {
+  background-color: #008f45;
+}
+
+.hover\:bg-brand-blue-dark:hover {
+  background-color: #032866;
+}
+
+/* Glass & Glow effects */
+.brand-shadow {
+  box-shadow: 0 10px 30px -5px rgba(6, 59, 152, 0.12), 0 4px 12px -2px rgba(6, 59, 152, 0.05);
+}
+
+.brand-shadow-lg {
+  box-shadow: 0 20px 40px -10px rgba(6, 59, 152, 0.2), 0 8px 16px -4px rgba(6, 59, 152, 0.08);
+}
+
+.green-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 166, 81, 0.35);
+}
+
+/* Pulse animation for live badge */
+@keyframes soft-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 2.5s infinite ease-in-out;
+}
