@@ -25,15 +25,15 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBookingM
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
+          <span className="reveal-init reveal-delay-1 inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
             Cuidados & Saúde Especializada
           </span>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#032866] font-heading tracking-tight">
+          <h2 className="reveal-init reveal-delay-2 text-3xl sm:text-4xl md:text-5xl font-black text-[#032866] font-heading tracking-tight">
             Saúde, beleza e bem-estar para o seu Pet
           </h2>
 
-          <p className="mt-3 text-base sm:text-lg text-gray-600 font-medium">
+          <p className="reveal-init reveal-delay-3 mt-3 text-base sm:text-lg text-gray-600 font-medium">
             Muito mais que um pet shop: oferecemos atendimento cuidadoso para a saúde e a estética do seu animal de estimação.
           </p>
         </div>
@@ -42,7 +42,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBookingM
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           
           {/* Card 1: Clínica Veterinária */}
-          <div className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-200 hover:border-[#063B98] shadow-sm transition-all duration-200 flex flex-col justify-between group">
+          <div className="reveal-init reveal-delay-2 bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-200 hover:border-[#063B98] shadow-sm transition-all duration-200 flex flex-col justify-between group">
             
             {/* Header & Image */}
             <div className="relative aspect-[16/9] overflow-hidden bg-slate-900">
@@ -127,7 +127,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBookingM
           </div>
 
           {/* Card 2: Banho e Tosa */}
-          <div className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-200 hover:border-[#063B98] shadow-sm transition-all duration-200 flex flex-col justify-between group">
+          <div className="reveal-init reveal-delay-4 bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-200 hover:border-[#063B98] shadow-sm transition-all duration-200 flex flex-col justify-between group">
             
             {/* Header & Image */}
             <div className="relative aspect-[16/9] overflow-hidden bg-slate-900">

@@ -15,25 +15,25 @@ export const CategoriesSection: React.FC<CategoriesSectionProps> = ({ onSelectCa
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
+          <span className="reveal-init reveal-delay-1 inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
             Variedade para todas as espécies
           </span>
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#032866] font-heading tracking-tight">
+          <h2 className="reveal-init reveal-delay-2 text-3xl sm:text-4xl lg:text-5xl font-black text-[#032866] font-heading tracking-tight">
             Tudo o que seu pet precisa em um só lugar
           </h2>
           
-          <p className="mt-3 text-base sm:text-lg text-gray-600 font-medium">
+          <p className="reveal-init reveal-delay-3 mt-3 text-base sm:text-lg text-gray-600 font-medium">
             Navegue pelos principais segmentos da Terra Fértil Pet e encontre nutrição, conforto, higiene e cuidados sob medida.
           </p>
         </div>
 
         {/* Categories Grid (6 Cards) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {CATEGORIES_DATA.map((category: Category) => (
+          {CATEGORIES_DATA.map((category: Category, index: number) => (
             <div
               key={category.id}
-              className="group bg-[#F5F7FA] hover:bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[#063B98] transition-all duration-200 hover:shadow-md flex flex-col justify-between"
+              className={`reveal-init reveal-delay-${(index % 6) + 1} group bg-[#F5F7FA] hover:bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[#063B98] transition-all duration-200 hover:shadow-md flex flex-col justify-between`}
             >
               {/* Card Image Area */}
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-200">
@@ -103,7 +103,7 @@ export const CategoriesSection: React.FC<CategoriesSectionProps> = ({ onSelectCa
         </div>
 
         {/* Bottom Helper Banner */}
-        <div className="mt-10 p-6 rounded-2xl bg-[#F5F7FA] border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="reveal-init mt-10 p-6 rounded-2xl bg-[#F5F7FA] border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3.5 text-center sm:text-left">
             <div className="w-11 h-11 rounded-xl bg-[#063B98] text-white flex items-center justify-center shrink-0 shadow-sm">
               <MessageCircle className="w-5 h-5 fill-white" />

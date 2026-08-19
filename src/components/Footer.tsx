@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           
           {/* Col 1: Brand & Slogan & Socials (4 cols) */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="reveal-init reveal-delay-1 lg:col-span-4 space-y-4">
             <BrandLogo variant="light" size="lg" />
             
             <p className="text-sm text-blue-100/90 leading-relaxed max-w-sm pt-2 font-normal">
@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
           </div>
 
           {/* Col 2: Navigation Links (2 cols) */}
-          <div className="lg:col-span-2 space-y-3">
+          <div className="reveal-init reveal-delay-2 lg:col-span-2 space-y-3">
             <h4 className="text-xs font-black uppercase tracking-wider text-emerald-400 font-heading">
               Navegação
             </h4>
@@ -101,7 +101,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
           </div>
 
           {/* Col 3: Services & Booking (3 cols) */}
-          <div className="lg:col-span-3 space-y-3">
+          <div className="reveal-init reveal-delay-3 lg:col-span-3 space-y-3">
             <h4 className="text-xs font-black uppercase tracking-wider text-emerald-400 font-heading">
               Serviços & Atendimento
             </h4>
@@ -145,7 +145,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
           </div>
 
           {/* Col 4: Contacts & Official Phones (3 cols) */}
-          <div className="lg:col-span-3 space-y-3">
+          <div className="reveal-init reveal-delay-4 lg:col-span-3 space-y-3">
             <h4 className="text-xs font-black uppercase tracking-wider text-emerald-400 font-heading">
               Contatos Oficiais
             </h4>

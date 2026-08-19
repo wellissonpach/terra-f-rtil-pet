@@ -42,21 +42,21 @@ export const ProductsShowcase: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <span className="inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
+          <span className="reveal-init reveal-delay-1 inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
             Variedade & Qualidade
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#032866] font-heading tracking-tight">
+          <h2 className="reveal-init reveal-delay-2 text-3xl sm:text-4xl lg:text-5xl font-black text-[#032866] font-heading tracking-tight">
             Nossos Produtos em Destaque
           </h2>
 
-          <p className="mt-3 text-base sm:text-lg text-gray-600 font-medium">
+          <p className="reveal-init reveal-delay-3 mt-3 text-base sm:text-lg text-gray-600 font-medium">
             Trabalhamos com marcas consagradas e produtos selecionados para atender todas as fases e necessidades do seu pet.
           </p>
         </div>
 
         {/* Filter Controls & Search Bar */}
-        <div className="mb-10 space-y-4">
+        <div className="reveal-init reveal-delay-2 mb-10 space-y-4">
           
           {/* Search Box */}
           <div className="max-w-md mx-auto relative">
@@ -100,10 +100,10 @@ export const ProductsShowcase: React.FC = () => {
         {/* Products Grid */}
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {filteredProducts.map((product: ProductItem) => (
+            {filteredProducts.map((product: ProductItem, index: number) => (
               <div
                 key={product.id}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[#063B98] transition-all duration-200 hover:shadow-md flex flex-col justify-between group"
+                className={`reveal-init reveal-delay-${(index % 4) + 1} bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[#063B98] transition-all duration-200 hover:shadow-md flex flex-col justify-between group`}
               >
                 {/* Product Image */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">

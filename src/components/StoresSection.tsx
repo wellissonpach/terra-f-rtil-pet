@@ -20,25 +20,25 @@ export const StoresSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
+          <span className="reveal-init reveal-delay-1 inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
             Rede de Atendimento
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#032866] font-heading tracking-tight">
+          <h2 className="reveal-init reveal-delay-2 text-3xl sm:text-4xl lg:text-5xl font-black text-[#032866] font-heading tracking-tight">
             Nossas Lojas
           </h2>
 
-          <p className="mt-3 text-base sm:text-lg text-gray-600 font-medium">
+          <p className="reveal-init reveal-delay-3 mt-3 text-base sm:text-lg text-gray-600 font-medium">
             Encontre a Terra Fértil Pet mais próxima e venha desfrutar de um atendimento caloroso e focado no seu pet.
           </p>
         </div>
 
         {/* Store Cards Grid */}
         <div className="grid grid-cols-1 max-w-4xl mx-auto gap-8">
-          {STORE_UNITS_DATA.map((unit) => (
+          {STORE_UNITS_DATA.map((unit, index) => (
             <div
               key={unit.id}
-              className="bg-[#F5F7FA] rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-200 hover:border-[#063B98] shadow-sm p-6 sm:p-8 transition-all duration-200"
+              className={`reveal-init reveal-delay-${(index % 4) + 2} bg-[#F5F7FA] rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-200 hover:border-[#063B98] shadow-sm p-6 sm:p-8 transition-all duration-200`}
             >
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 

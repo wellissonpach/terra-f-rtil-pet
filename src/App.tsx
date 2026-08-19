@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useScrollReveal } from './utils/useScrollReveal';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { OpeningHoursSection } from './components/OpeningHoursSection';
@@ -16,6 +17,7 @@ import { BookingModal } from './components/BookingModal';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export default function App() {
+  useScrollReveal();
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [initialService, setInitialService] = useState<'banho-e-tosa' | 'clinica'>('banho-e-tosa');
 

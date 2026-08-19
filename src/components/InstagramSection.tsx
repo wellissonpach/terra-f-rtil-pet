@@ -10,7 +10,7 @@ export const InstagramSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
+          <div className="reveal-init reveal-delay-1">
             <span className="inline-block px-3.5 py-1 bg-pink-50 text-pink-700 text-xs font-bold rounded-full uppercase tracking-wider mb-3">
               {COMPANY_CONTACTS.instagram}
             </span>
@@ -25,7 +25,7 @@ export const InstagramSection: React.FC = () => {
           </div>
 
           {/* Social Stats & Follow CTA */}
-          <div className="flex items-center gap-3">
+          <div className="reveal-init reveal-delay-2 flex items-center gap-3">
             <div className="p-3 px-4 rounded-xl bg-[#F5F7FA] border border-gray-200 text-center">
               <span className="block text-lg font-black text-[#032866]">{COMPANY_CONTACTS.instagramFollowers}</span>
               <span className="text-[11px] text-gray-500 font-medium">Seguidores</span>
@@ -51,13 +51,13 @@ export const InstagramSection: React.FC = () => {
 
         {/* Instagram Visual Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {INSTAGRAM_POSTS_DATA.map((post) => (
+          {INSTAGRAM_POSTS_DATA.map((post, index) => (
             <a
               key={post.id}
               href={COMPANY_CONTACTS.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-[#F5F7FA] rounded-2xl overflow-hidden border border-gray-200 hover:border-[#063B98] transition-all duration-200 hover:shadow-md flex flex-col justify-between"
+              className={`reveal-init reveal-delay-${(index % 4) + 1} group bg-[#F5F7FA] rounded-2xl overflow-hidden border border-gray-200 hover:border-[#063B98] transition-all duration-200 hover:shadow-md flex flex-col justify-between`}
             >
               {/* Image Container */}
               <div className="relative aspect-square overflow-hidden bg-gray-200">
@@ -101,7 +101,7 @@ export const InstagramSection: React.FC = () => {
         </div>
 
         {/* Facebook Link Banner */}
-        <div className="mt-8 text-center text-xs text-gray-500 font-medium">
+        <div className="reveal-init mt-8 text-center text-xs text-gray-500 font-medium">
           Você também pode nos encontrar no Facebook:{' '}
           <a
             href={COMPANY_CONTACTS.facebookUrl}

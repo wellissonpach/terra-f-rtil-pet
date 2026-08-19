@@ -7,12 +7,12 @@ export const StoreShowcase: React.FC = () => {
     <section className="py-16 md:py-24 bg-[#F5F7FA] relative border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-[#032866] text-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-white/10 p-6 sm:p-10 lg:p-12 relative">
+        <div className="reveal-init bg-[#032866] text-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-white/10 p-6 sm:p-10 lg:p-12 relative">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             
             {/* Left Column: Store Message & CTAs */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="reveal-init reveal-delay-1 lg:col-span-7 space-y-6">
               
               <span className="inline-block px-3.5 py-1 bg-white/10 text-emerald-300 text-xs font-bold rounded-full uppercase tracking-wider">
                 Espaço Físico Completo
@@ -86,7 +86,7 @@ export const StoreShowcase: React.FC = () => {
             </div>
 
             {/* Right Column: Store Atmosphere Photo */}
-            <div className="lg:col-span-5">
+            <div className="reveal-scale-init reveal-delay-2 lg:col-span-5">
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-white/20 shadow-md group">
                 <img
                   src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1000&auto=format&fit=crop"

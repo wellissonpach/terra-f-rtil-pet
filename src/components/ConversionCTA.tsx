@@ -7,27 +7,27 @@ export const ConversionCTA: React.FC = () => {
     <section className="py-16 md:py-24 bg-white relative border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="relative rounded-2xl sm:rounded-3xl bg-[#032866] text-white p-8 sm:p-12 lg:p-16 overflow-hidden shadow-lg border border-white/10 text-center">
+        <div className="reveal-scale-init relative rounded-2xl sm:rounded-3xl bg-[#032866] text-white p-8 sm:p-12 lg:p-16 overflow-hidden shadow-lg border border-white/10 text-center">
           
           {/* Content Container */}
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
             
-            <span className="inline-block px-3.5 py-1 bg-white/10 text-emerald-300 text-xs font-bold rounded-full uppercase tracking-wider">
+            <span className="reveal-init reveal-delay-1 inline-block px-3.5 py-1 bg-white/10 text-emerald-300 text-xs font-bold rounded-full uppercase tracking-wider">
               Cuidado e Carinho para o seu Companheiro
             </span>
 
             {/* Section 14 Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            <h2 className="reveal-init reveal-delay-2 text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white tracking-tight leading-tight">
               Seu pet merece o melhor.
             </h2>
 
             {/* Section 14 Subtitle */}
-            <p className="text-lg sm:text-xl text-blue-100 font-normal leading-relaxed">
+            <p className="reveal-init reveal-delay-3 text-lg sm:text-xl text-blue-100 font-normal leading-relaxed">
               Encontre o que precisa na Terra Fértil Pet.
             </p>
 
             {/* Trust Highlights */}
-            <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm text-blue-200 pt-2 font-medium">
+            <div className="reveal-init reveal-delay-4 flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm text-blue-200 pt-2 font-medium">
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#00A651]" />
                 Atendimento Rápido
@@ -43,7 +43,7 @@ export const ConversionCTA: React.FC = () => {
             </div>
 
             {/* Main CTA Button */}
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+            <div className="reveal-init reveal-delay-5 pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
               <a
                 id="conversion-section-whatsapp-cta"
                 href={buildWhatsAppUrl(PRESET_MESSAGES.general)}

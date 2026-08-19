@@ -16,15 +16,15 @@ export const FAQSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <span className="inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
+          <span className="reveal-init reveal-delay-1 inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
             Tire Suas Dúvidas
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#032866] font-heading tracking-tight">
+          <h2 className="reveal-init reveal-delay-2 text-3xl sm:text-4xl lg:text-5xl font-black text-[#032866] font-heading tracking-tight">
             Perguntas Frequentes
           </h2>
 
-          <p className="mt-3 text-base sm:text-lg text-gray-600 font-medium">
+          <p className="reveal-init reveal-delay-3 mt-3 text-base sm:text-lg text-gray-600 font-medium">
             Respostas rápidas para as principais dúvidas sobre nossos produtos e serviços.
           </p>
         </div>
@@ -36,7 +36,7 @@ export const FAQSection: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl border border-gray-200 shadow-xs overflow-hidden transition-all duration-200"
+                className={`reveal-init reveal-delay-${(index % 5) + 1} bg-white rounded-2xl border border-gray-200 shadow-xs overflow-hidden transition-all duration-200`}
               >
                 <button
                   type="button"
@@ -62,7 +62,7 @@ export const FAQSection: React.FC = () => {
         </div>
 
         {/* Bottom Help CTA */}
-        <div className="mt-10 text-center">
+        <div className="reveal-init reveal-delay-2 mt-10 text-center">
           <p className="text-sm text-gray-600 font-medium mb-3">
             Ainda ficou com alguma dúvida sobre o atendimento ou produto?
           </p>

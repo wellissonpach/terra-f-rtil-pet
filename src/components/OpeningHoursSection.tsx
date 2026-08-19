@@ -16,11 +16,11 @@ export const OpeningHoursSection: React.FC = () => {
     <section className="py-12 md:py-16 bg-[#F5F7FA] relative border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm">
+        <div className="reveal-init bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             
             {/* Left: Status & Title */}
-            <div className="lg:col-span-5 space-y-3 text-center lg:text-left">
+            <div className="reveal-init reveal-delay-1 lg:col-span-5 space-y-3 text-center lg:text-left">
               <span className="inline-block px-3 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider">
                 Horário de Atendimento
               </span>
@@ -49,7 +49,7 @@ export const OpeningHoursSection: React.FC = () => {
             <div className="lg:col-span-4 grid grid-cols-1 gap-2.5">
               
               {/* Monday to Saturday */}
-              <div className="p-3.5 rounded-xl bg-[#F5F7FA] border border-gray-200 flex items-center justify-between">
+              <div className="reveal-init reveal-delay-2 p-3.5 rounded-xl bg-[#F5F7FA] border border-gray-200 flex items-center justify-between">
                 <div className="space-y-0.5">
                   <span className="text-[11px] font-bold uppercase text-[#063B98] tracking-wider block">
                     Segunda a Sábado
@@ -65,7 +65,7 @@ export const OpeningHoursSection: React.FC = () => {
               </div>
 
               {/* Sundays and Holidays */}
-              <div className="p-3.5 rounded-xl bg-[#F5F7FA] border border-gray-200 flex items-center justify-between">
+              <div className="reveal-init reveal-delay-3 p-3.5 rounded-xl bg-[#F5F7FA] border border-gray-200 flex items-center justify-between">
                 <div className="space-y-0.5">
                   <span className="text-[11px] font-bold uppercase text-[#00A651] tracking-wider block">
                     Domingos e Feriados
@@ -83,7 +83,7 @@ export const OpeningHoursSection: React.FC = () => {
             </div>
 
             {/* Right: Quick Action */}
-            <div className="lg:col-span-3 text-center lg:text-right space-y-2.5">
+            <div className="reveal-init reveal-delay-4 lg:col-span-3 text-center lg:text-right space-y-2.5">
               <p className="text-xs text-gray-500 font-medium">Dúvidas sobre o funcionamento hoje?</p>
               <a
                 href={buildWhatsAppUrl(PRESET_MESSAGES.general)}

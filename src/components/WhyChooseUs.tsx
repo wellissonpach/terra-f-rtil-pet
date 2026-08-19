@@ -27,27 +27,27 @@ export const WhyChooseUs: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
+          <span className="reveal-init reveal-delay-1 inline-block px-3.5 py-1 bg-[#063B98]/10 text-[#063B98] text-xs font-bold rounded-full uppercase tracking-wider mb-3">
             Nossos Diferenciais
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#032866] font-heading tracking-tight">
+          <h2 className="reveal-init reveal-delay-2 text-3xl sm:text-4xl lg:text-5xl font-black text-[#032866] font-heading tracking-tight">
             Por que escolher a Terra Fértil Pet?
           </h2>
 
-          <p className="mt-3 text-base sm:text-lg text-gray-600 font-medium">
+          <p className="reveal-init reveal-delay-3 mt-3 text-base sm:text-lg text-gray-600 font-medium">
             Combinamos variedade, conveniência e amor pelos animais para proporcionar a melhor experiência para você e seu pet.
           </p>
         </div>
 
         {/* Differentials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {DIFFERENTIALS_DATA.map((item) => {
+          {DIFFERENTIALS_DATA.map((item, index) => {
             const IconComponent = iconMap[item.iconName] || CheckCircle;
             return (
               <div
                 key={item.id}
-                className="p-6 sm:p-7 rounded-2xl bg-[#F5F7FA] hover:bg-white border border-gray-200 hover:border-[#063B98] transition-all duration-200 hover:shadow-md group flex flex-col justify-between"
+                className={`reveal-init reveal-delay-${(index % 6) + 1} p-6 sm:p-7 rounded-2xl bg-[#F5F7FA] hover:bg-white border border-gray-200 hover:border-[#063B98] transition-all duration-200 hover:shadow-md group flex flex-col justify-between`}
               >
                 <div>
                   {/* Icon Container */}
