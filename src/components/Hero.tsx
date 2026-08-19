@@ -44,16 +44,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal: _onOpenBookingMo
         className="absolute inset-0 w-full h-[108%] -top-[4%] z-0 pointer-events-none overflow-hidden transition-transform duration-75 ease-out will-change-transform"
         style={{ transform: `translate3d(0, ${bgTranslateY}px, 0)` }}
       >
-        {/* Instant Fallback Poster Image (Zero-Delay Paint) */}
-        <img
-          src="/background/poster.webp"
-          alt="Terra Fértil Pet"
-          className="absolute inset-0 w-full h-full object-cover object-[40%_center] md:object-center"
-          loading="eager"
-          // @ts-ignore
-          fetchpriority="high"
-        />
-
         {/* Background Video with Instant Buffer Preload */}
         <video 
           autoPlay 
@@ -61,20 +51,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal: _onOpenBookingMo
           muted 
           playsInline 
           preload="auto"
-          poster="/background/poster.webp"
-          className="absolute inset-0 w-full h-full object-cover object-[40%_center] md:object-center transition-opacity duration-500"
+          className="absolute inset-0 w-full h-full object-cover object-[40%_center] md:object-center"
         >
           <source src="/background/dogs2.mp4" type="video/mp4" />
         </video>
         
-        {/* Dramatic Left-to-Right Navy Gradient Overlay for Text Readability */}
+        {/* Left-to-Right Navy Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#021330] via-[#021330]/90 via-35% md:via-48% to-transparent"></div>
-        
-        {/* Subtle Vignette Top & Bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#021330]/90 via-transparent to-[#021330]/50"></div>
-        
-        {/* Light Darkening Tint */}
-        <div className="absolute inset-0 bg-[#021330]/20"></div>
       </div>
 
       {/* Main Content with Progressive Stagger Reveal & Scroll Reaction */}
