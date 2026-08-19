@@ -44,12 +44,25 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal: _onOpenBookingMo
         className="absolute inset-0 w-full h-[108%] -top-[4%] z-0 pointer-events-none overflow-hidden transition-transform duration-75 ease-out will-change-transform"
         style={{ transform: `translate3d(0, ${bgTranslateY}px, 0)` }}
       >
+        {/* Instant Fallback Poster Image (Zero-Delay Paint) */}
+        <img
+          src="/background/poster.webp"
+          alt="Terra Fértil Pet"
+          className="absolute inset-0 w-full h-full object-cover object-[40%_center] md:object-center"
+          loading="eager"
+          // @ts-ignore
+          fetchpriority="high"
+        />
+
+        {/* Background Video with Instant Buffer Preload */}
         <video 
           autoPlay 
           loop 
           muted 
           playsInline 
-          className="w-full h-full object-cover object-[40%_center] md:object-center"
+          preload="auto"
+          poster="/background/poster.webp"
+          className="absolute inset-0 w-full h-full object-cover object-[40%_center] md:object-center transition-opacity duration-500"
         >
           <source src="/background/dogs2.mp4" type="video/mp4" />
         </video>
