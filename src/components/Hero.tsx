@@ -39,22 +39,29 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal: _onOpenBookingMo
 
   return (
     <section id="inicio" className="relative min-h-[92vh] lg:min-h-screen flex items-center justify-start overflow-hidden bg-[#021330] pt-28 pb-16 lg:py-0">
-      {/* Background Video with Subtle Parallax Depth */}
+      {/* Background Media with Subtle Parallax Depth */}
       <div 
         className="absolute inset-0 w-full h-[108%] -top-[4%] z-0 pointer-events-none overflow-hidden transition-transform duration-75 ease-out will-change-transform"
         style={{ transform: `translate3d(0, ${bgTranslateY}px, 0)` }}
       >
-        {/* Background Video with Instant Buffer Preload */}
+        {/* Mobile Background Video */}
         <video 
           autoPlay 
           loop 
           muted 
           playsInline 
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover object-[40%_center] md:object-center"
+          className="md:hidden absolute inset-0 w-full h-full object-cover object-[40%_center]"
         >
           <source src="/background/dogs2.mp4" type="video/mp4" />
         </video>
+
+        {/* Desktop Background Image */}
+        <img 
+          src="/background/desktop.jpeg" 
+          alt="Terra Fértil Pet" 
+          className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
+        />
         
         {/* Left-to-Right Navy Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#021330] via-[#021330]/90 via-35% md:via-48% to-transparent"></div>
